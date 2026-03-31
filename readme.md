@@ -4,8 +4,6 @@
 
 <br/>
 
-# HK APPS
-
 **We build at the intersection of games, mobile, and artificial intelligence.**
 
 <br/>
