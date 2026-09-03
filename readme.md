@@ -38,19 +38,19 @@ Running active research and development in AI — focusing on user behavior, aut
 
 **Mobile**
 
-_No languages detected yet._
+![Kotlin](https://img.shields.io/badge/Kotlin-A97BFF?style=flat-square&logo=kotlin&logoColor=white) ![Java](https://img.shields.io/badge/Java-b07219?style=flat-square&logo=java&logoColor=white) ![Objective-C++](https://img.shields.io/badge/Objective--C%2B%2B-6866fb?style=flat-square&logo=apple&logoColor=white)
 
 **Web & Games**
 
-_No languages detected yet._
+![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat-square&logo=javascript&logoColor=black) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat-square&logo=html&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-663399?style=flat-square&logo=css&logoColor=white) ![C#](https://img.shields.io/badge/C%23-7355dd?style=flat-square&logo=csharp&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat-square&logo=typescript&logoColor=white) ![SCSS](https://img.shields.io/badge/SCSS-c6538c?style=flat-square&logo=scss&logoColor=white) ![Vue](https://img.shields.io/badge/Vue-41b883?style=flat-square&logo=vue&logoColor=white) ![GLSL](https://img.shields.io/badge/GLSL-5686a5?style=flat-square&logo=glsl&logoColor=white) ![HLSL](https://img.shields.io/badge/HLSL-aace60?style=flat-square&logo=hlsl&logoColor=white) ![C++](https://img.shields.io/badge/C%2B%2B-f34b7d?style=flat-square&logo=cplusplus&logoColor=white)
 
 **AI & Backend**
 
-![Python](https://img.shields.io/badge/Python-3572A5?style=flat-square&logo=python&logoColor=white) ![Ruby](https://img.shields.io/badge/Ruby-701516?style=flat-square&logo=ruby&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-4F5D95?style=flat-square&logo=php&logoColor=white) ![Blade](https://img.shields.io/badge/Blade-f7523f?style=flat-square&logo=blade&logoColor=white) ![Hack](https://img.shields.io/badge/Hack-878787?style=flat-square&logo=hack&logoColor=white) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat-square&logo=python&logoColor=white) ![Less](https://img.shields.io/badge/Less-1d365d?style=flat-square&logo=less&logoColor=white) ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white) ![Smarty](https://img.shields.io/badge/Smarty-f0c040?style=flat-square&logo=smarty&logoColor=white) ![ShaderLab](https://img.shields.io/badge/ShaderLab-222c37?style=flat-square&logo=shaderlab&logoColor=white) ![Go Template](https://img.shields.io/badge/Go_Template-00ADD8?style=flat-square&logo=gotemplate&logoColor=white) ![Gnuplot](https://img.shields.io/badge/Gnuplot-f0a9f0?style=flat-square&logo=gnuplot&logoColor=white) ![MDX](https://img.shields.io/badge/MDX-fcb32c?style=flat-square&logo=mdx&logoColor=white) ![Ruby](https://img.shields.io/badge/Ruby-701516?style=flat-square&logo=ruby&logoColor=white) ![PureBasic](https://img.shields.io/badge/PureBasic-5a6986?style=flat-square&logo=purebasic&logoColor=white) ![Procfile](https://img.shields.io/badge/Procfile-3B2F63?style=flat-square&logo=procfile&logoColor=white)
 
 **Infrastructure**
 
-![Shell](https://img.shields.io/badge/Shell-89e051?style=flat-square&logo=gnubash&logoColor=white)
+![Shell](https://img.shields.io/badge/Shell-89e051?style=flat-square&logo=gnubash&logoColor=white) ![HCL](https://img.shields.io/badge/HCL-844FBA?style=flat-square&logo=terraform&logoColor=white) ![Makefile](https://img.shields.io/badge/Makefile-427819?style=flat-square&logo=makefile&logoColor=white) ![Batchfile](https://img.shields.io/badge/Batchfile-C1F12E?style=flat-square&logo=batchfile&logoColor=white) ![Dockerfile](https://img.shields.io/badge/Dockerfile-384d54?style=flat-square&logo=docker&logoColor=white) ![CMake](https://img.shields.io/badge/CMake-DA3434?style=flat-square&logo=cmake&logoColor=white)
 
 <!-- GITHUB-TECH:END -->
 
@@ -62,7 +62,7 @@ _No languages detected yet._
 
 | Repositories | Commits | Stars | Forks | Open Issues | Active 30d |
 |:------------:|:-------:|:-----:|:-----:|:-----------:|:----------:|
-| **5** | **17** | **0** | **0** | **0** | **2** |
+| **5** | **19** | **0** | **0** | **0** | **2** |
 
 ### Languages
 
@@ -72,7 +72,7 @@ _No languages detected yet._
 
 | Repository | Stars | Forks | Commits | Language |
 |---|---:|---:|---:|---|
-| [hkappsai](https://github.com/hkappsai/hkappsai) | ⭐ 0 | 0 | 8 | — |
+| [hkappsai](https://github.com/hkappsai/hkappsai) | ⭐ 0 | 0 | 10 | — |
 | [hkapps-ai-tools-directory](https://github.com/hkappsai/hkapps-ai-tools-directory) | ⭐ 0 | 0 | 3 | — |
 | [readme-guide](https://github.com/hkappsai/readme-guide) | ⭐ 0 | 0 | 3 | — |
 | [adtext-generator](https://github.com/hkappsai/adtext-generator) | ⭐ 0 | 0 | 2 | Python |
@@ -82,7 +82,7 @@ _No languages detected yet._
 
 [`hkappsai`](https://github.com/hkappsai/hkappsai) · [`mac-safe-disk-cleaner`](https://github.com/hkappsai/mac-safe-disk-cleaner)
 
-<sub>Last synced from GitHub: 03 Sep 2026 14:00 UTC</sub>
+<sub>Last synced from GitHub: 03 Sep 2026 14:11 UTC</sub>
 
 <!-- GITHUB-STATS:END -->
 
