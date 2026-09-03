@@ -64,7 +64,30 @@ Running active research and development in AI — focusing on user behavior, aut
 
 <!-- GITHUB-STATS:START -->
 
-Repository statistics are updated automatically from public GitHub data.
+| Repositories | Commits | Stars | Forks | Open Issues | Active 30d |
+|:------------:|:-------:|:-----:|:-----:|:-----------:|:----------:|
+| **7** | **77** | **0** | **0** | **0** | **3** |
+
+### Languages
+
+`Kotlin` · `Shell` · `Python`
+
+### Top Repositories
+
+| Repository | Stars | Forks | Commits | Language |
+|---|---:|---:|---:|---|
+| [ReelsShorts](https://github.com/jeel44/ReelsShorts) | ⭐ 0 | 0 | 37 | Kotlin |
+| [Messages](https://github.com/jeel44/Messages) | ⭐ 0 | 0 | 27 | Kotlin |
+| [hkappsai](https://github.com/hkappsai/hkappsai) | ⭐ 0 | 0 | 4 | — |
+| [hkapps-ai-tools-directory](https://github.com/hkappsai/hkapps-ai-tools-directory) | ⭐ 0 | 0 | 3 | — |
+| [readme-guide](https://github.com/hkappsai/readme-guide) | ⭐ 0 | 0 | 3 | — |
+| [adtext-generator](https://github.com/hkappsai/adtext-generator) | ⭐ 0 | 0 | 2 | Python |
+
+### Recently Active
+
+[`hkappsai`](https://github.com/hkappsai/hkappsai) · [`ReelsShorts`](https://github.com/jeel44/ReelsShorts) · [`mac-safe-disk-cleaner`](https://github.com/hkappsai/mac-safe-disk-cleaner)
+
+<sub>Last synced from GitHub: 03 Sep 2026 10:50 UTC</sub>
 
 <!-- GITHUB-STATS:END -->
 
