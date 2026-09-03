@@ -60,6 +60,16 @@ Running active research and development in AI — focusing on user behavior, aut
 
 ---
 
+## GitHub Activity
+
+<!-- GITHUB-STATS:START -->
+
+Repository statistics are updated automatically from public GitHub data.
+
+<!-- GITHUB-STATS:END -->
+
+---
+
 ## What We're Working On
 
 ```
