@@ -29,6 +29,30 @@ def repository(
 
 
 class StatsTests(unittest.TestCase):
+    def test_query_requests_only_owned_repositories(self) -> None:
+        captured_query = ""
+
+        def fake_graphql(_token: str, query: str, _variables: dict) -> dict:
+            nonlocal captured_query
+            captured_query = query
+            return {
+                "repositoryOwner": {
+                    "repositories": {
+                        "nodes": [],
+                        "pageInfo": {"hasNextPage": False, "endCursor": None},
+                    }
+                }
+            }
+
+        original_graphql = updater.graphql
+        updater.graphql = fake_graphql
+        try:
+            self.assertEqual(updater.get_repositories("token", "hkappsai"), [])
+        finally:
+            updater.graphql = original_graphql
+
+        self.assertIn("ownerAffiliations: [OWNER]", captured_query)
+
     def test_render_excludes_forks_and_archived_repositories(self) -> None:
         stats = updater.render_stats(
             [repository("active", commits=7), repository("fork", fork=True), repository("old", archived=True)],

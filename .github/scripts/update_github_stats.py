@@ -56,6 +56,7 @@ def get_repositories(token: str, owner: str) -> list[dict[str, Any]]:
           first: 100
           after: $cursor
           privacy: PUBLIC
+          ownerAffiliations: [OWNER]
           orderBy: {field: PUSHED_AT, direction: DESC}
         ) {
           pageInfo { hasNextPage endCursor }
