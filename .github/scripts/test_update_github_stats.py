@@ -12,6 +12,9 @@ def repository(
     commits: int = 1,
     fork: bool = False,
     archived: bool = False,
+    private: bool = False,
+    language: str = "Python",
+    color: str = "#3572A5",
     pushed_at: str = "2026-09-01T00:00:00Z",
 ) -> dict:
     return {
@@ -19,10 +22,14 @@ def repository(
         "url": f"https://github.com/hkappsai/{name}",
         "isArchived": archived,
         "isFork": fork,
+        "isPrivate": private,
         "stargazerCount": 2,
         "forkCount": 1,
         "pushedAt": pushed_at,
-        "primaryLanguage": {"name": "Python"},
+        "primaryLanguage": {"name": language},
+        "languages": {
+            "edges": [{"size": 100, "node": {"name": language, "color": color}}]
+        },
         "issues": {"totalCount": 3},
         "defaultBranchRef": {"target": {"history": {"totalCount": commits}}},
     }
@@ -52,15 +59,33 @@ class StatsTests(unittest.TestCase):
             updater.graphql = original_graphql
 
         self.assertIn("ownerAffiliations: [OWNER]", captured_query)
+        self.assertNotIn("privacy: PUBLIC", captured_query)
+
+    def test_technology_uses_public_and_private_repository_languages(self) -> None:
+        technology = updater.render_technology(
+            [
+                repository("public-python"),
+                repository("private-kotlin", private=True, language="Kotlin", color="#A97BFF"),
+            ]
+        )
+
+        self.assertIn("![Python]", technology)
+        self.assertIn("![Kotlin]", technology)
 
     def test_render_excludes_forks_and_archived_repositories(self) -> None:
         stats = updater.render_stats(
-            [repository("active", commits=7), repository("fork", fork=True), repository("old", archived=True)],
+            [
+                repository("active", commits=7),
+                repository("private", private=True),
+                repository("fork", fork=True),
+                repository("old", archived=True),
+            ],
             now=datetime(2026, 9, 3, tzinfo=timezone.utc),
         )
 
         self.assertIn("| **1** | **7** | **2** | **1** | **3** | **1** |", stats)
         self.assertIn("[active](https://github.com/hkappsai/active)", stats)
+        self.assertNotIn("github.com/hkappsai/private", stats)
         self.assertNotIn("github.com/hkappsai/fork", stats)
         self.assertNotIn("github.com/hkappsai/old", stats)
 
@@ -68,16 +93,20 @@ class StatsTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "readme.md"
             path.write_text(
-                f"before\n{updater.START_MARKER}\nold\n{updater.END_MARKER}\nafter\n",
+                f"before\n{updater.TECH_START_MARKER}\nold tech\n"
+                f"{updater.TECH_END_MARKER}\nmiddle\n{updater.START_MARKER}\nold stats\n"
+                f"{updater.END_MARKER}\nafter\n",
                 encoding="utf-8",
             )
 
-            self.assertTrue(updater.update_readme(path, "new stats"))
+            self.assertTrue(updater.update_readme(path, "new tech", "new stats"))
             self.assertEqual(
                 path.read_text(encoding="utf-8"),
-                f"before\n{updater.START_MARKER}\n\nnew stats\n\n{updater.END_MARKER}\nafter\n",
+                f"before\n{updater.TECH_START_MARKER}\n\nnew tech\n\n"
+                f"{updater.TECH_END_MARKER}\nmiddle\n{updater.START_MARKER}\n\nnew stats\n\n"
+                f"{updater.END_MARKER}\nafter\n",
             )
-            self.assertFalse(updater.update_readme(path, "new stats"))
+            self.assertFalse(updater.update_readme(path, "new tech", "new stats"))
 
 
 if __name__ == "__main__":

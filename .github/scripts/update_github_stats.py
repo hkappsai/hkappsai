@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Update the generated GitHub Activity block in the profile README."""
+"""Update generated Technology and GitHub Activity blocks in the profile README."""
 
 from __future__ import annotations
 
@@ -8,6 +8,7 @@ import os
 import sys
 import urllib.error
 import urllib.request
+import urllib.parse
 from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -16,6 +17,63 @@ from typing import Any
 API_URL = "https://api.github.com/graphql"
 START_MARKER = "<!-- GITHUB-STATS:START -->"
 END_MARKER = "<!-- GITHUB-STATS:END -->"
+TECH_START_MARKER = "<!-- GITHUB-TECH:START -->"
+TECH_END_MARKER = "<!-- GITHUB-TECH:END -->"
+
+CATEGORY_ORDER = ("Mobile", "Web & Games", "AI & Backend", "Infrastructure")
+LANGUAGE_CATEGORIES = {
+    "Kotlin": "Mobile",
+    "Java": "Mobile",
+    "Swift": "Mobile",
+    "Dart": "Mobile",
+    "Objective-C": "Mobile",
+    "Objective-C++": "Mobile",
+    "JavaScript": "Web & Games",
+    "TypeScript": "Web & Games",
+    "HTML": "Web & Games",
+    "CSS": "Web & Games",
+    "SCSS": "Web & Games",
+    "Vue": "Web & Games",
+    "Svelte": "Web & Games",
+    "GDScript": "Web & Games",
+    "C#": "Web & Games",
+    "C++": "Web & Games",
+    "GLSL": "Web & Games",
+    "HLSL": "Web & Games",
+    "WebAssembly": "Web & Games",
+    "Python": "AI & Backend",
+    "Jupyter Notebook": "AI & Backend",
+    "Go": "AI & Backend",
+    "Rust": "AI & Backend",
+    "PHP": "AI & Backend",
+    "Ruby": "AI & Backend",
+    "C": "AI & Backend",
+    "R": "AI & Backend",
+    "Scala": "AI & Backend",
+    "Clojure": "AI & Backend",
+    "Elixir": "AI & Backend",
+    "Erlang": "AI & Backend",
+    "Julia": "AI & Backend",
+    "Lua": "AI & Backend",
+    "Shell": "Infrastructure",
+    "Dockerfile": "Infrastructure",
+    "HCL": "Infrastructure",
+    "Nix": "Infrastructure",
+    "Makefile": "Infrastructure",
+    "CMake": "Infrastructure",
+    "PowerShell": "Infrastructure",
+    "Batchfile": "Infrastructure",
+}
+LANGUAGE_LOGOS = {
+    "C#": "csharp",
+    "C++": "cplusplus",
+    "Dockerfile": "docker",
+    "HCL": "terraform",
+    "Jupyter Notebook": "jupyter",
+    "Objective-C": "apple",
+    "Objective-C++": "apple",
+    "Shell": "gnubash",
+}
 
 
 def graphql(token: str, query: str, variables: dict[str, Any]) -> dict[str, Any]:
@@ -55,7 +113,6 @@ def get_repositories(token: str, owner: str) -> list[dict[str, Any]]:
         repositories(
           first: 100
           after: $cursor
-          privacy: PUBLIC
           ownerAffiliations: [OWNER]
           orderBy: {field: PUSHED_AT, direction: DESC}
         ) {
@@ -65,10 +122,14 @@ def get_repositories(token: str, owner: str) -> list[dict[str, Any]]:
             url
             isArchived
             isFork
+            isPrivate
             stargazerCount
             forkCount
             pushedAt
             primaryLanguage { name }
+            languages(first: 50, orderBy: {field: SIZE, direction: DESC}) {
+              edges { size node { name color } }
+            }
             issues(states: OPEN) { totalCount }
             defaultBranchRef {
               target {
@@ -104,12 +165,52 @@ def commit_count(repository: dict[str, Any]) -> int:
         return 0
 
 
+def render_badge(language: str, color: str | None) -> str:
+    label = language.replace("-", "--").replace("_", "__").replace(" ", "_")
+    encoded_label = urllib.parse.quote(label, safe="")
+    badge_color = (color or "555555").lstrip("#")
+    logo = LANGUAGE_LOGOS.get(language, language.casefold().replace(" ", ""))
+    logo_parameter = f"&logo={urllib.parse.quote(logo, safe='')}" if logo else ""
+    logo_color = "black" if badge_color.upper() in {"F1E05A", "F7DF1E"} else "white"
+    return (
+        f"![{language}](https://img.shields.io/badge/{encoded_label}-{badge_color}"
+        f"?style=flat-square{logo_parameter}&logoColor={logo_color})"
+    )
+
+
+def render_technology(repositories: list[dict[str, Any]]) -> str:
+    language_totals: Counter[str] = Counter()
+    language_colors: dict[str, str | None] = {}
+    for repository in repositories:
+        if repository["isFork"] or repository["isArchived"]:
+            continue
+        for edge in (repository.get("languages") or {}).get("edges", []):
+            language = edge["node"]["name"]
+            language_totals[language] += edge["size"]
+            language_colors.setdefault(language, edge["node"].get("color"))
+
+    categories: dict[str, list[str]] = {category: [] for category in CATEGORY_ORDER}
+    for language, _ in language_totals.most_common():
+        category = LANGUAGE_CATEGORIES.get(language, "AI & Backend")
+        categories[category].append(render_badge(language, language_colors[language]))
+
+    lines: list[str] = []
+    for category in CATEGORY_ORDER:
+        if lines:
+            lines.append("")
+        lines.extend([f"**{category}**", ""])
+        lines.append(" ".join(categories[category]) or "_No languages detected yet._")
+    return "\n".join(lines)
+
+
 def render_stats(repositories: list[dict[str, Any]], now: datetime | None = None) -> str:
     now = now or datetime.now(timezone.utc)
     active_repositories = [
         repository
         for repository in repositories
-        if not repository["isFork"] and not repository["isArchived"]
+        if not repository["isPrivate"]
+        and not repository["isFork"]
+        and not repository["isArchived"]
     ]
     active_cutoff = now - timedelta(days=30)
     recently_active = []
@@ -190,14 +291,18 @@ def render_stats(repositories: list[dict[str, Any]], now: datetime | None = None
     return "\n".join(lines)
 
 
-def update_readme(readme_path: Path, stats: str) -> bool:
-    readme = readme_path.read_text(encoding="utf-8")
-    if readme.count(START_MARKER) != 1 or readme.count(END_MARKER) != 1:
-        raise RuntimeError("README must contain exactly one matching pair of GitHub stats markers")
+def replace_block(document: str, start_marker: str, end_marker: str, content: str) -> str:
+    if document.count(start_marker) != 1 or document.count(end_marker) != 1:
+        raise RuntimeError(f"README must contain exactly one marker pair: {start_marker}")
+    start = document.index(start_marker) + len(start_marker)
+    end = document.index(end_marker, start)
+    return f"{document[:start]}\n\n{content}\n\n{document[end:]}"
 
-    start = readme.index(START_MARKER) + len(START_MARKER)
-    end = readme.index(END_MARKER, start)
-    updated = f"{readme[:start]}\n\n{stats}\n\n{readme[end:]}"
+
+def update_readme(readme_path: Path, technology: str, stats: str) -> bool:
+    readme = readme_path.read_text(encoding="utf-8")
+    updated = replace_block(readme, TECH_START_MARKER, TECH_END_MARKER, technology)
+    updated = replace_block(updated, START_MARKER, END_MARKER, stats)
     if updated == readme:
         return False
     readme_path.write_text(updated, encoding="utf-8")
@@ -213,12 +318,10 @@ def main() -> int:
         return 2
 
     repositories = get_repositories(token, owner)
+    technology = render_technology(repositories)
     stats = render_stats(repositories)
-    changed = update_readme(readme_path, stats)
-    print(
-        f"Found {len(repositories)} public repositories for {owner}; "
-        f"README {'updated' if changed else 'already current'}."
-    )
+    changed = update_readme(readme_path, technology, stats)
+    print(f"README {'updated' if changed else 'already current'} for {owner}.")
     return 0
 
 
