@@ -36,7 +36,21 @@ Running active research and development in AI — focusing on user behavior, aut
 
 <!-- GITHUB-TECH:START -->
 
-Technology badges are updated automatically from GitHub repository languages.
+**Mobile**
+
+_No languages detected yet._
+
+**Web & Games**
+
+_No languages detected yet._
+
+**AI & Backend**
+
+![Python](https://img.shields.io/badge/Python-3572A5?style=flat-square&logo=python&logoColor=white) ![Ruby](https://img.shields.io/badge/Ruby-701516?style=flat-square&logo=ruby&logoColor=white)
+
+**Infrastructure**
+
+![Shell](https://img.shields.io/badge/Shell-89e051?style=flat-square&logo=gnubash&logoColor=white)
 
 <!-- GITHUB-TECH:END -->
 
@@ -48,7 +62,7 @@ Technology badges are updated automatically from GitHub repository languages.
 
 | Repositories | Commits | Stars | Forks | Open Issues | Active 30d |
 |:------------:|:-------:|:-----:|:-----:|:-----------:|:----------:|
-| **5** | **15** | **0** | **0** | **0** | **2** |
+| **5** | **17** | **0** | **0** | **0** | **2** |
 
 ### Languages
 
@@ -58,7 +72,7 @@ Technology badges are updated automatically from GitHub repository languages.
 
 | Repository | Stars | Forks | Commits | Language |
 |---|---:|---:|---:|---|
-| [hkappsai](https://github.com/hkappsai/hkappsai) | ⭐ 0 | 0 | 6 | — |
+| [hkappsai](https://github.com/hkappsai/hkappsai) | ⭐ 0 | 0 | 8 | — |
 | [hkapps-ai-tools-directory](https://github.com/hkappsai/hkapps-ai-tools-directory) | ⭐ 0 | 0 | 3 | — |
 | [readme-guide](https://github.com/hkappsai/readme-guide) | ⭐ 0 | 0 | 3 | — |
 | [adtext-generator](https://github.com/hkappsai/adtext-generator) | ⭐ 0 | 0 | 2 | Python |
@@ -68,7 +82,7 @@ Technology badges are updated automatically from GitHub repository languages.
 
 [`hkappsai`](https://github.com/hkappsai/hkappsai) · [`mac-safe-disk-cleaner`](https://github.com/hkappsai/mac-safe-disk-cleaner)
 
-<sub>Last synced from GitHub: 03 Sep 2026 10:51 UTC</sub>
+<sub>Last synced from GitHub: 03 Sep 2026 14:00 UTC</sub>
 
 <!-- GITHUB-STATS:END -->
 
