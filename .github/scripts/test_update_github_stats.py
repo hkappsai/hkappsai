@@ -59,7 +59,35 @@ class StatsTests(unittest.TestCase):
             updater.graphql = original_graphql
 
         self.assertIn("ownerAffiliations: [OWNER]", captured_query)
+        self.assertIn("privacy: PUBLIC", captured_query)
+
+    def test_technology_query_requests_no_private_issue_data(self) -> None:
+        captured_query = ""
+
+        def fake_graphql(_token: str, query: str, _variables: dict) -> dict:
+            nonlocal captured_query
+            captured_query = query
+            return {
+                "repositoryOwner": {
+                    "repositories": {
+                        "nodes": [],
+                        "pageInfo": {"hasNextPage": False, "endCursor": None},
+                    }
+                }
+            }
+
+        original_graphql = updater.graphql
+        updater.graphql = fake_graphql
+        try:
+            self.assertEqual(
+                updater.get_technology_repositories("token", "hkappsai"), []
+            )
+        finally:
+            updater.graphql = original_graphql
+
         self.assertNotIn("privacy: PUBLIC", captured_query)
+        self.assertNotIn("issues(", captured_query)
+        self.assertNotIn("name\n", captured_query)
 
     def test_technology_uses_public_and_private_repository_languages(self) -> None:
         technology = updater.render_technology(

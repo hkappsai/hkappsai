@@ -113,6 +113,7 @@ def get_repositories(token: str, owner: str) -> list[dict[str, Any]]:
         repositories(
           first: 100
           after: $cursor
+          privacy: PUBLIC
           ownerAffiliations: [OWNER]
           orderBy: {field: PUSHED_AT, direction: DESC}
         ) {
@@ -151,6 +152,44 @@ def get_repositories(token: str, owner: str) -> list[dict[str, Any]]:
         if repository_owner is None:
             raise RuntimeError(f"GitHub owner not found: {owner}")
 
+        page = repository_owner["repositories"]
+        repositories.extend(repo for repo in page["nodes"] if repo is not None)
+        if not page["pageInfo"]["hasNextPage"]:
+            return repositories
+        cursor = page["pageInfo"]["endCursor"]
+
+
+def get_technology_repositories(token: str, owner: str) -> list[dict[str, Any]]:
+    """Return language data for every owned repository visible to the token."""
+    query = """
+    query($login: String!, $cursor: String) {
+      repositoryOwner(login: $login) {
+        repositories(
+          first: 100
+          after: $cursor
+          ownerAffiliations: [OWNER]
+          orderBy: {field: PUSHED_AT, direction: DESC}
+        ) {
+          pageInfo { hasNextPage endCursor }
+          nodes {
+            isArchived
+            isFork
+            languages(first: 50, orderBy: {field: SIZE, direction: DESC}) {
+              edges { size node { name color } }
+            }
+          }
+        }
+      }
+    }
+    """
+
+    repositories: list[dict[str, Any]] = []
+    cursor: str | None = None
+    while True:
+        data = graphql(token, query, {"login": owner, "cursor": cursor})
+        repository_owner = data.get("repositoryOwner")
+        if repository_owner is None:
+            raise RuntimeError(f"GitHub owner not found: {owner}")
         page = repository_owner["repositories"]
         repositories.extend(repo for repo in page["nodes"] if repo is not None)
         if not page["pageInfo"]["hasNextPage"]:
@@ -311,15 +350,17 @@ def update_readme(readme_path: Path, technology: str, stats: str) -> bool:
 
 def main() -> int:
     token = os.environ.get("GITHUB_TOKEN")
+    technology_token = os.environ.get("TECHNOLOGY_TOKEN") or token
     owner = os.environ.get("GITHUB_OWNER")
     readme_path = Path(os.environ.get("README_PATH", "readme.md"))
     if not token or not owner:
         print("GITHUB_TOKEN and GITHUB_OWNER are required", file=sys.stderr)
         return 2
 
-    repositories = get_repositories(token, owner)
-    technology = render_technology(repositories)
-    stats = render_stats(repositories)
+    public_repositories = get_repositories(token, owner)
+    technology_repositories = get_technology_repositories(technology_token, owner)
+    technology = render_technology(technology_repositories)
+    stats = render_stats(public_repositories)
     changed = update_readme(readme_path, technology, stats)
     print(f"README {'updated' if changed else 'already current'} for {owner}.")
     return 0
