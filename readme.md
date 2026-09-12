@@ -42,11 +42,11 @@ Running active research and development in AI — focusing on user behavior, aut
 
 **Web & Games**
 
-![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat-square&logo=javascript&logoColor=black) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat-square&logo=html&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-663399?style=flat-square&logo=css&logoColor=white) ![C#](https://img.shields.io/badge/C%23-7355dd?style=flat-square&logo=csharp&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat-square&logo=typescript&logoColor=white) ![SCSS](https://img.shields.io/badge/SCSS-c6538c?style=flat-square&logo=scss&logoColor=white) ![Vue](https://img.shields.io/badge/Vue-41b883?style=flat-square&logo=vue&logoColor=white) ![GLSL](https://img.shields.io/badge/GLSL-5686a5?style=flat-square&logo=glsl&logoColor=white) ![HLSL](https://img.shields.io/badge/HLSL-aace60?style=flat-square&logo=hlsl&logoColor=white) ![C++](https://img.shields.io/badge/C%2B%2B-f34b7d?style=flat-square&logo=cplusplus&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat-square&logo=javascript&logoColor=black) ![C#](https://img.shields.io/badge/C%23-7355dd?style=flat-square&logo=csharp&logoColor=white) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat-square&logo=html&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-663399?style=flat-square&logo=css&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat-square&logo=typescript&logoColor=white) ![SCSS](https://img.shields.io/badge/SCSS-c6538c?style=flat-square&logo=scss&logoColor=white) ![Vue](https://img.shields.io/badge/Vue-41b883?style=flat-square&logo=vue&logoColor=white) ![HLSL](https://img.shields.io/badge/HLSL-aace60?style=flat-square&logo=hlsl&logoColor=white) ![GLSL](https://img.shields.io/badge/GLSL-5686a5?style=flat-square&logo=glsl&logoColor=white) ![C++](https://img.shields.io/badge/C%2B%2B-f34b7d?style=flat-square&logo=cplusplus&logoColor=white)
 
 **AI & Backend**
 
-![PHP](https://img.shields.io/badge/PHP-4F5D95?style=flat-square&logo=php&logoColor=white) ![Blade](https://img.shields.io/badge/Blade-f7523f?style=flat-square&logo=blade&logoColor=white) ![Hack](https://img.shields.io/badge/Hack-878787?style=flat-square&logo=hack&logoColor=white) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat-square&logo=python&logoColor=white) ![Less](https://img.shields.io/badge/Less-1d365d?style=flat-square&logo=less&logoColor=white) ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white) ![Smarty](https://img.shields.io/badge/Smarty-f0c040?style=flat-square&logo=smarty&logoColor=white) ![ShaderLab](https://img.shields.io/badge/ShaderLab-222c37?style=flat-square&logo=shaderlab&logoColor=white) ![Go Template](https://img.shields.io/badge/Go_Template-00ADD8?style=flat-square&logo=gotemplate&logoColor=white) ![Gnuplot](https://img.shields.io/badge/Gnuplot-f0a9f0?style=flat-square&logo=gnuplot&logoColor=white) ![MDX](https://img.shields.io/badge/MDX-fcb32c?style=flat-square&logo=mdx&logoColor=white) ![Ruby](https://img.shields.io/badge/Ruby-701516?style=flat-square&logo=ruby&logoColor=white) ![PureBasic](https://img.shields.io/badge/PureBasic-5a6986?style=flat-square&logo=purebasic&logoColor=white) ![Procfile](https://img.shields.io/badge/Procfile-3B2F63?style=flat-square&logo=procfile&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-4F5D95?style=flat-square&logo=php&logoColor=white) ![Blade](https://img.shields.io/badge/Blade-f7523f?style=flat-square&logo=blade&logoColor=white) ![Hack](https://img.shields.io/badge/Hack-878787?style=flat-square&logo=hack&logoColor=white) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat-square&logo=python&logoColor=white) ![Less](https://img.shields.io/badge/Less-1d365d?style=flat-square&logo=less&logoColor=white) ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white) ![ShaderLab](https://img.shields.io/badge/ShaderLab-222c37?style=flat-square&logo=shaderlab&logoColor=white) ![Smarty](https://img.shields.io/badge/Smarty-f0c040?style=flat-square&logo=smarty&logoColor=white) ![Go Template](https://img.shields.io/badge/Go_Template-00ADD8?style=flat-square&logo=gotemplate&logoColor=white) ![Gnuplot](https://img.shields.io/badge/Gnuplot-f0a9f0?style=flat-square&logo=gnuplot&logoColor=white) ![MDX](https://img.shields.io/badge/MDX-fcb32c?style=flat-square&logo=mdx&logoColor=white) ![Ruby](https://img.shields.io/badge/Ruby-701516?style=flat-square&logo=ruby&logoColor=white) ![PureBasic](https://img.shields.io/badge/PureBasic-5a6986?style=flat-square&logo=purebasic&logoColor=white) ![Procfile](https://img.shields.io/badge/Procfile-3B2F63?style=flat-square&logo=procfile&logoColor=white)
 
 **Infrastructure**
 
@@ -62,7 +62,7 @@ Running active research and development in AI — focusing on user behavior, aut
 
 | Repositories | Commits | Stars | Forks | Open Issues | Active 30d |
 |:------------:|:-------:|:-----:|:-----:|:-----------:|:----------:|
-| **5** | **27** | **0** | **0** | **0** | **1** |
+| **5** | **28** | **0** | **0** | **0** | **1** |
 
 ### Languages
 
@@ -72,7 +72,7 @@ Running active research and development in AI — focusing on user behavior, aut
 
 | Repository | Stars | Forks | Commits | Language |
 |---|---:|---:|---:|---|
-| [hkappsai](https://github.com/hkappsai/hkappsai) | ⭐ 0 | 0 | 18 | — |
+| [hkappsai](https://github.com/hkappsai/hkappsai) | ⭐ 0 | 0 | 19 | — |
 | [hkapps-ai-tools-directory](https://github.com/hkappsai/hkapps-ai-tools-directory) | ⭐ 0 | 0 | 3 | — |
 | [readme-guide](https://github.com/hkappsai/readme-guide) | ⭐ 0 | 0 | 3 | — |
 | [adtext-generator](https://github.com/hkappsai/adtext-generator) | ⭐ 0 | 0 | 2 | Python |
@@ -82,7 +82,7 @@ Running active research and development in AI — focusing on user behavior, aut
 
 [`hkappsai`](https://github.com/hkappsai/hkappsai)
 
-<sub>Last synced from GitHub: 11 Sep 2026 04:43 UTC</sub>
+<sub>Last synced from GitHub: 12 Sep 2026 04:38 UTC</sub>
 
 <!-- GITHUB-STATS:END -->
 
