@@ -42,7 +42,7 @@ Running active research and development in AI — focusing on user behavior, aut
 
 **Web & Games**
 
-![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat-square&logo=javascript&logoColor=black) ![C#](https://img.shields.io/badge/C%23-7355dd?style=flat-square&logo=csharp&logoColor=white) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat-square&logo=html&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-663399?style=flat-square&logo=css&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat-square&logo=typescript&logoColor=white) ![SCSS](https://img.shields.io/badge/SCSS-c6538c?style=flat-square&logo=scss&logoColor=white) ![Vue](https://img.shields.io/badge/Vue-41b883?style=flat-square&logo=vue&logoColor=white) ![HLSL](https://img.shields.io/badge/HLSL-aace60?style=flat-square&logo=hlsl&logoColor=white) ![GLSL](https://img.shields.io/badge/GLSL-5686a5?style=flat-square&logo=glsl&logoColor=white) ![C++](https://img.shields.io/badge/C%2B%2B-f34b7d?style=flat-square&logo=cplusplus&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat-square&logo=javascript&logoColor=black) ![C#](https://img.shields.io/badge/C%23-7355dd?style=flat-square&logo=csharp&logoColor=white) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat-square&logo=html&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-663399?style=flat-square&logo=css&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat-square&logo=typescript&logoColor=white) ![SCSS](https://img.shields.io/badge/SCSS-c6538c?style=flat-square&logo=scss&logoColor=white) ![Vue](https://img.shields.io/badge/Vue-41b883?style=flat-square&logo=vue&logoColor=white) ![C++](https://img.shields.io/badge/C%2B%2B-f34b7d?style=flat-square&logo=cplusplus&logoColor=white) ![HLSL](https://img.shields.io/badge/HLSL-aace60?style=flat-square&logo=hlsl&logoColor=white) ![GLSL](https://img.shields.io/badge/GLSL-5686a5?style=flat-square&logo=glsl&logoColor=white)
 
 **AI & Backend**
 
@@ -50,7 +50,7 @@ Running active research and development in AI — focusing on user behavior, aut
 
 **Infrastructure**
 
-![Shell](https://img.shields.io/badge/Shell-89e051?style=flat-square&logo=gnubash&logoColor=white) ![HCL](https://img.shields.io/badge/HCL-844FBA?style=flat-square&logo=terraform&logoColor=white) ![Makefile](https://img.shields.io/badge/Makefile-427819?style=flat-square&logo=makefile&logoColor=white) ![Batchfile](https://img.shields.io/badge/Batchfile-C1F12E?style=flat-square&logo=batchfile&logoColor=white) ![Dockerfile](https://img.shields.io/badge/Dockerfile-384d54?style=flat-square&logo=docker&logoColor=white) ![CMake](https://img.shields.io/badge/CMake-DA3434?style=flat-square&logo=cmake&logoColor=white)
+![Shell](https://img.shields.io/badge/Shell-89e051?style=flat-square&logo=gnubash&logoColor=white) ![HCL](https://img.shields.io/badge/HCL-844FBA?style=flat-square&logo=terraform&logoColor=white) ![CMake](https://img.shields.io/badge/CMake-DA3434?style=flat-square&logo=cmake&logoColor=white) ![Makefile](https://img.shields.io/badge/Makefile-427819?style=flat-square&logo=makefile&logoColor=white) ![Batchfile](https://img.shields.io/badge/Batchfile-C1F12E?style=flat-square&logo=batchfile&logoColor=white) ![Dockerfile](https://img.shields.io/badge/Dockerfile-384d54?style=flat-square&logo=docker&logoColor=white)
 
 <!-- GITHUB-TECH:END -->
 
@@ -62,7 +62,7 @@ Running active research and development in AI — focusing on user behavior, aut
 
 | Repositories | Commits | Stars | Forks | Open Issues | Active 30d |
 |:------------:|:-------:|:-----:|:-----:|:-----------:|:----------:|
-| **6** | **70** | **0** | **0** | **0** | **2** |
+| **6** | **71** | **0** | **0** | **0** | **2** |
 
 ### Languages
 
@@ -72,7 +72,7 @@ Running active research and development in AI — focusing on user behavior, aut
 
 | Repository | Stars | Forks | Commits | Language |
 |---|---:|---:|---:|---|
-| [hkappsai](https://github.com/hkappsai/hkappsai) | ⭐ 0 | 0 | 54 | — |
+| [hkappsai](https://github.com/hkappsai/hkappsai) | ⭐ 0 | 0 | 55 | — |
 | [messages-android](https://github.com/hkappsai/messages-android) | ⭐ 0 | 0 | 7 | Java |
 | [hkapps-ai-tools-directory](https://github.com/hkappsai/hkapps-ai-tools-directory) | ⭐ 0 | 0 | 3 | — |
 | [readme-guide](https://github.com/hkappsai/readme-guide) | ⭐ 0 | 0 | 3 | — |
@@ -83,7 +83,7 @@ Running active research and development in AI — focusing on user behavior, aut
 
 [`hkappsai`](https://github.com/hkappsai/hkappsai) · [`messages-android`](https://github.com/hkappsai/messages-android)
 
-<sub>Last synced from GitHub: 17 Oct 2026 04:29 UTC</sub>
+<sub>Last synced from GitHub: 18 Oct 2026 04:37 UTC</sub>
 
 <!-- GITHUB-STATS:END -->
 
