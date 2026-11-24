@@ -38,7 +38,7 @@ Running active research and development in AI — focusing on user behavior, aut
 
 **Mobile**
 
-![Kotlin](https://img.shields.io/badge/Kotlin-A97BFF?style=flat-square&logo=kotlin&logoColor=white) ![Java](https://img.shields.io/badge/Java-b07219?style=flat-square&logo=java&logoColor=white) ![Objective-C++](https://img.shields.io/badge/Objective--C%2B%2B-6866fb?style=flat-square&logo=apple&logoColor=white) ![Objective-C](https://img.shields.io/badge/Objective--C-438eff?style=flat-square&logo=apple&logoColor=white)
+![Kotlin](https://img.shields.io/badge/Kotlin-A97BFF?style=flat-square&logo=kotlin&logoColor=white) ![Java](https://img.shields.io/badge/Java-b07219?style=flat-square&logo=java&logoColor=white) ![Objective-C++](https://img.shields.io/badge/Objective--C%2B%2B-6866fb?style=flat-square&logo=apple&logoColor=white) ![Swift](https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white) ![Objective-C](https://img.shields.io/badge/Objective--C-438eff?style=flat-square&logo=apple&logoColor=white)
 
 **Web & Games**
 
@@ -46,11 +46,11 @@ Running active research and development in AI — focusing on user behavior, aut
 
 **AI & Backend**
 
-![PHP](https://img.shields.io/badge/PHP-4F5D95?style=flat-square&logo=php&logoColor=white) ![Blade](https://img.shields.io/badge/Blade-f7523f?style=flat-square&logo=blade&logoColor=white) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat-square&logo=python&logoColor=white) ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white) ![Hack](https://img.shields.io/badge/Hack-878787?style=flat-square&logo=hack&logoColor=white) ![Less](https://img.shields.io/badge/Less-1d365d?style=flat-square&logo=less&logoColor=white) ![ShaderLab](https://img.shields.io/badge/ShaderLab-222c37?style=flat-square&logo=shaderlab&logoColor=white) ![Go Template](https://img.shields.io/badge/Go_Template-00ADD8?style=flat-square&logo=gotemplate&logoColor=white) ![Smarty](https://img.shields.io/badge/Smarty-f0c040?style=flat-square&logo=smarty&logoColor=white) ![Ruby](https://img.shields.io/badge/Ruby-701516?style=flat-square&logo=ruby&logoColor=white) ![Gnuplot](https://img.shields.io/badge/Gnuplot-f0a9f0?style=flat-square&logo=gnuplot&logoColor=white) ![MDX](https://img.shields.io/badge/MDX-fcb32c?style=flat-square&logo=mdx&logoColor=white) ![PLSQL](https://img.shields.io/badge/PLSQL-dad8d8?style=flat-square&logo=plsql&logoColor=white) ![PureBasic](https://img.shields.io/badge/PureBasic-5a6986?style=flat-square&logo=purebasic&logoColor=white) ![Procfile](https://img.shields.io/badge/Procfile-3B2F63?style=flat-square&logo=procfile&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-4F5D95?style=flat-square&logo=php&logoColor=white) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat-square&logo=python&logoColor=white) ![Blade](https://img.shields.io/badge/Blade-f7523f?style=flat-square&logo=blade&logoColor=white) ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white) ![Hack](https://img.shields.io/badge/Hack-878787?style=flat-square&logo=hack&logoColor=white) ![Less](https://img.shields.io/badge/Less-1d365d?style=flat-square&logo=less&logoColor=white) ![ShaderLab](https://img.shields.io/badge/ShaderLab-222c37?style=flat-square&logo=shaderlab&logoColor=white) ![Go Template](https://img.shields.io/badge/Go_Template-00ADD8?style=flat-square&logo=gotemplate&logoColor=white) ![Smarty](https://img.shields.io/badge/Smarty-f0c040?style=flat-square&logo=smarty&logoColor=white) ![Ruby](https://img.shields.io/badge/Ruby-701516?style=flat-square&logo=ruby&logoColor=white) ![Gnuplot](https://img.shields.io/badge/Gnuplot-f0a9f0?style=flat-square&logo=gnuplot&logoColor=white) ![C](https://img.shields.io/badge/C-555555?style=flat-square&logo=c&logoColor=white) ![MDX](https://img.shields.io/badge/MDX-fcb32c?style=flat-square&logo=mdx&logoColor=white) ![PLSQL](https://img.shields.io/badge/PLSQL-dad8d8?style=flat-square&logo=plsql&logoColor=white) ![PureBasic](https://img.shields.io/badge/PureBasic-5a6986?style=flat-square&logo=purebasic&logoColor=white) ![Procfile](https://img.shields.io/badge/Procfile-3B2F63?style=flat-square&logo=procfile&logoColor=white)
 
 **Infrastructure**
 
-![Shell](https://img.shields.io/badge/Shell-89e051?style=flat-square&logo=gnubash&logoColor=white) ![HCL](https://img.shields.io/badge/HCL-844FBA?style=flat-square&logo=terraform&logoColor=white) ![CMake](https://img.shields.io/badge/CMake-DA3434?style=flat-square&logo=cmake&logoColor=white) ![Makefile](https://img.shields.io/badge/Makefile-427819?style=flat-square&logo=makefile&logoColor=white) ![Dockerfile](https://img.shields.io/badge/Dockerfile-384d54?style=flat-square&logo=docker&logoColor=white) ![Batchfile](https://img.shields.io/badge/Batchfile-C1F12E?style=flat-square&logo=batchfile&logoColor=white)
+![Shell](https://img.shields.io/badge/Shell-89e051?style=flat-square&logo=gnubash&logoColor=white) ![HCL](https://img.shields.io/badge/HCL-844FBA?style=flat-square&logo=terraform&logoColor=white) ![CMake](https://img.shields.io/badge/CMake-DA3434?style=flat-square&logo=cmake&logoColor=white) ![Dockerfile](https://img.shields.io/badge/Dockerfile-384d54?style=flat-square&logo=docker&logoColor=white) ![Makefile](https://img.shields.io/badge/Makefile-427819?style=flat-square&logo=makefile&logoColor=white) ![Batchfile](https://img.shields.io/badge/Batchfile-C1F12E?style=flat-square&logo=batchfile&logoColor=white)
 
 <!-- GITHUB-TECH:END -->
 
@@ -62,7 +62,7 @@ Running active research and development in AI — focusing on user behavior, aut
 
 | Repositories | Commits | Stars | Forks | Open Issues | Active 30d |
 |:------------:|:-------:|:-----:|:-----:|:-----------:|:----------:|
-| **6** | **107** | **0** | **0** | **0** | **1** |
+| **6** | **108** | **0** | **0** | **0** | **1** |
 
 ### Languages
 
@@ -72,7 +72,7 @@ Running active research and development in AI — focusing on user behavior, aut
 
 | Repository | Stars | Forks | Commits | Language |
 |---|---:|---:|---:|---|
-| [hkappsai](https://github.com/hkappsai/hkappsai) | ⭐ 0 | 0 | 91 | — |
+| [hkappsai](https://github.com/hkappsai/hkappsai) | ⭐ 0 | 0 | 92 | — |
 | [messages-android](https://github.com/hkappsai/messages-android) | ⭐ 0 | 0 | 7 | Java |
 | [hkapps-ai-tools-directory](https://github.com/hkappsai/hkapps-ai-tools-directory) | ⭐ 0 | 0 | 3 | — |
 | [readme-guide](https://github.com/hkappsai/readme-guide) | ⭐ 0 | 0 | 3 | — |
@@ -83,7 +83,7 @@ Running active research and development in AI — focusing on user behavior, aut
 
 [`hkappsai`](https://github.com/hkappsai/hkappsai)
 
-<sub>Last synced from GitHub: 23 Nov 2026 07:42 UTC</sub>
+<sub>Last synced from GitHub: 24 Nov 2026 09:57 UTC</sub>
 
 <!-- GITHUB-STATS:END -->
 
